@@ -1,0 +1,18 @@
+.all_catigories {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.all_catigories img {
+	object-fit: cover;
+	width: 100%;
+	height: 350px;
+}
+
+.all_catigories p {
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 20px;
+}

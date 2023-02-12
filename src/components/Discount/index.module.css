@@ -1,0 +1,40 @@
+.discount_container {
+	background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+	height: 476px;
+	margin-top: 112px;
+}
+
+.discount_block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.img_block {
+	margin: 27px 91px;
+}
+
+.input_button_block {
+	color: #ffffff;
+	margin: 44px 200px;
+}
+
+.input_button_block h2 {
+	width: 575px;
+	font-weight: 700;
+	font-size: 90px;
+	line-height: 120%;
+}
+
+.accent {
+	display: block;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 130%;
+}
+
+input {
+	margin: 46px 0 30px 0;
+}
+:focus {
+	outline: none;
+}

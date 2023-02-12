@@ -1,0 +1,24 @@
+.categories_section h2 {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 130%;
+}
+
+.catigori {
+	display: flex;
+	align-items: center;
+	gap: 96px;
+	margin: 40px 0 20px 0;
+}
+
+.catigori button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.category_card {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 32px;
+}

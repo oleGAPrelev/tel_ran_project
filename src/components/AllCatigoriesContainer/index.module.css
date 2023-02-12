@@ -1,0 +1,19 @@
+.all_catigories {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 130%;
+}
+
+.all_catigories h2 {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 130%;
+	margin: 79px 0 81px;
+}
+
+.categories_container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 35px;
+	margin-bottom: 40px;
+}

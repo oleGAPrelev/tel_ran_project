@@ -1,0 +1,39 @@
+.nav_block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 110px;
+}
+
+.logo_btn {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	gap: 59px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav_menu {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	gap: 57px;
+	align-items: center;
+}
+
+.nav_menu a {
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.nav_menu a:focus {
+	color: #339933;
+}
+
+.scroll {
+	cursor: pointer;
+}
+
+.bad {
+	width: 27px;
+	height: 30px;
+}

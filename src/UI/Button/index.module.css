@@ -1,0 +1,55 @@
+.nav_button {
+	width: 129px;
+	height: 49px;
+	background-color: #339933;
+	border: 2px solid #339933;
+	border-radius: 5px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.sale_btn_white_mode {
+	border: 2px solid #a1e2eb;
+	width: 241px;
+	height: 82px;
+	background-color: #ffffff;
+	border-radius: 13px;
+	color: #2d2d2d;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+.sale_btn_white_mode:hover {
+	border: 2px solid #ffffff;
+	width: 241px;
+	height: 82px;
+	background-color: #a1e2eb;
+	border-radius: 13px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+.all_catigories {
+	width: 120px;
+	height: 30.97px;
+	border: 2px solid #8b8b8b;
+	color: #8b8b8b;
+	background-color: #e5e5e5;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 130%;
+}
+
+.discount_button {
+	width: 473px;
+	height: 75.44px;
+	border: 2.39494px solid #ffffff;
+	border-radius: 25.1468px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 28.7392px;
+	line-height: 120%;
+}

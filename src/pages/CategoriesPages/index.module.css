@@ -1,0 +1,12 @@
+.categories_pages h2 {
+	font-weight: 700;
+	font-size: 40px;
+	margin: 79px 0 81px 0;
+}
+
+.catigories {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 32px;
+	margin-bottom: 160px;
+}

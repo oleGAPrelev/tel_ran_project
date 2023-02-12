@@ -1,0 +1,37 @@
+.sales_card img {
+	width: 319px;
+	height: 276px;
+	object-fit: cover;
+}
+
+.prices {
+	display: flex;
+	align-items: center;
+	margin: 20px 0 10px 25px;
+	gap: 33px;
+}
+
+.prices p:nth-child(1) {
+	font-weight: 600;
+	font-size: 30px;
+}
+
+.prices p:nth-child(2) {
+	font-weight: 500;
+	font-size: 20px;
+	color: #8b8b8b;
+}
+
+.prices p:nth-child(3) {
+	font-weight: 600;
+	font-size: 20px;
+	color: #ff32a1;
+}
+
+.sales_title p {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 130%;
+	max-width: 250px;
+	margin: 10px 0 0 25px;
+}
