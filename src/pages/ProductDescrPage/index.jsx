@@ -20,11 +20,9 @@ export default function ProductDescrPage() {
 
 	useEffect(() => {
 		dispatch(load_product(id));
-	}, []);
+	}, [dispatch, id]);
 
 	const { title, image, price, discont_price, description } = product;
-
-	console.log(product);
 
 	return (
 		<div className={['wrapper', s.product_descr].join(' ')}>

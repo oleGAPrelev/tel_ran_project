@@ -5,7 +5,11 @@ export const load_products = (id) => {
 		fetch(`http://localhost:3333/categories/${id}`)
 			.then((resp) => resp.json())
 			.then((json) => {
-				dispatch(loadProducts(json));
+				const payload = json.map((el) => ({
+					...el,
+					hide: false,
+				}));
+				dispatch(loadProducts(payload));
 			});
 	};
 };

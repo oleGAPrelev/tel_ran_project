@@ -3,6 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import ProductsCard from '../../components/ProductsCard';
 import { load_products } from '../../requests/products_req';
+import {
+	searchPrice,
+	sortProducts,
+} from '../../store/reducers/productsReducer';
 import s from './index.module.css';
 
 export default function ProductsPage() {
@@ -16,6 +20,16 @@ export default function ProductsPage() {
 		dispatch(load_products(id));
 	}, [dispatch, id]);
 
+	const sort_products = (event) => dispatch(sortProducts(event.target.value));
+
+	const search = (event) => {
+		event.preventDefault();
+		const { min, max } = event.target;
+		const min_value = min.value || 0;
+		const max_value = max.value || Infinity;
+		dispatch(searchPrice({ min_value, max_value }));
+	};
+
 	return (
 		<div className={['wrapper', s.products_pages].join(' ')}>
 			<div>
@@ -25,7 +39,7 @@ export default function ProductsPage() {
 			</div>
 
 			<div className={s.sorting}>
-				<div className={s.price_form}>
+				<div className={s.price_form} onSubmit={search}>
 					<form>
 						<span>Price</span>
 						<input type="number" placeholder="from" name="min" />
@@ -43,7 +57,7 @@ export default function ProductsPage() {
 				<div className={s.sort_block}>
 					<form>
 						<span>Sorted</span>
-						<select className={s.sort_select}>
+						<select className={s.sort_select} onInput={sort_products}>
 							<option value="default">by default</option>
 							<option value="title">by title</option>
 							<option value="price">by price</option>
@@ -53,9 +67,11 @@ export default function ProductsPage() {
 			</div>
 
 			<div className={s.products}>
-				{products.map((el) => (
-					<ProductsCard key={el.id} {...el} />
-				))}
+				{products
+					.filter((el) => !el.hide)
+					.map((el) => (
+						<ProductsCard key={el.id} {...el} />
+					))}
 			</div>
 		</div>
 	);
