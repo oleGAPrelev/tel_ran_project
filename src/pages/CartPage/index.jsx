@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function CartPage() {
-	return <div>CartPage</div>;
+export default function CardPage() {
+	return <div>CardPage</div>;
 }

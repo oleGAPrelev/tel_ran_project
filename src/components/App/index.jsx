@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import CartPage from '../../pages/CartPage';
+import CatalogPage from '../../pages/CatalogPage';
 import CategoriesPages from '../../pages/CategoriesPages';
 import HomePage from '../../pages/HomePage';
 import NotFoundPage from '../../pages/NotFoundPage';
@@ -17,6 +18,7 @@ function App() {
 					<Route path="cart" element={<CartPage />} />
 					<Route path="categories/:id" element={<ProductsPage />} />
 					<Route path="/product/:id" element={<ProductDescrPage />} />
+					<Route path="/catalog" element={<CatalogPage />} />
 					<Route path="*" element={<NotFoundPage />} />
 				</Route>
 			</Routes>

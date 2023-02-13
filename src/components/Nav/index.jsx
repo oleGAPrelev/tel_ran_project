@@ -13,7 +13,9 @@ export default function Nav() {
 				<Link to="/">
 					<img src={logo} alt="logo" />
 				</Link>
-				<Button>Catalog</Button>
+				<Link to="/catalog">
+					<Button>Catalog</Button>
+				</Link>
 			</div>
 
 			<ul className={s.nav_menu}>
