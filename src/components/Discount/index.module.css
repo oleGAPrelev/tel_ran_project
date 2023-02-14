@@ -1,6 +1,6 @@
 .discount_container {
 	background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
-	height: 476px;
+	height: 500px;
 }
 
 .discount_block {
@@ -29,11 +29,39 @@
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 130%;
+	margin-bottom: 40px;
 }
 
 input {
-	margin: 46px 0 30px 0;
+	margin: 6px 0 6px 0;
 }
 :focus {
 	outline: none;
+}
+
+.input_button_block button {
+	width: 473px;
+	height: 75.44px;
+	border: 2.39494px solid #ffffff;
+	border-radius: 25.1468px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 28.7392px;
+	line-height: 120%;
+	margin-top: 24px;
+}
+
+.error {
+	background-color: crimson;
+	opacity: 0;
+	animation: ani 0.5s forwards;
+}
+
+@keyframes ani {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

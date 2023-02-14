@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import s from './index.module.css';
 
-export default function Input(props) {
-	return <input className={s.input_style} {...props} />;
-}
+export const Input = forwardRef((props, ref) => {
+	return <input {...props} ref={ref} className={s.input_style} />;
+});
+
+export default Input;

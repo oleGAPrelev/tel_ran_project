@@ -14,7 +14,7 @@ export default function CategoriesContainer() {
 
 	useEffect(() => {
 		dispatch(load_categories);
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<section className={['wrapper', s.categories_section].join(' ')}>

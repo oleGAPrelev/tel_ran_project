@@ -13,7 +13,7 @@ export default function CategoriesPages() {
 
 	useEffect(() => {
 		dispatch(load_categories);
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<div className={['wrapper', s.categories_pages].join(' ')}>
