@@ -12,6 +12,7 @@ export const searchPrice = (payload) => ({ type: SEARCH_PRICE, payload });
 
 export const productsReducer = (state = defaultState, action) => {
 	if (action.type === LOAD_PRODUCTS) {
+		first_state = action.payload;
 		return action.payload;
 	} else if (action.type === SORT_PRODUCTS) {
 		if (action.payload === 'default') {

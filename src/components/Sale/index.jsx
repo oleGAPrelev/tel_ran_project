@@ -15,7 +15,6 @@ export default function Sale() {
 					<Link to="/catalog">
 						<Button type="sale_btn_white_mode">Sale</Button>
 					</Link>
-
 					<Button type="sale_btn_white_mode">Learn more</Button>
 				</div>
 				<img src={flowers} alt="flowers" />

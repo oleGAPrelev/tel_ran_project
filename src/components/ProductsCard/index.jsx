@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../UI/Button';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../store/reducers/cart';
 import s from './index.module.css';
 
 export default function ProductsCard({
@@ -9,8 +11,23 @@ export default function ProductsCard({
 	image,
 	price,
 	discont_price,
+	description,
 }) {
+	const dispatch = useDispatch();
+
 	const product_url = `/product/${id}`;
+
+	const add_to_cart = () =>
+		dispatch(
+			addToCart({
+				id: +id,
+				title,
+				image,
+				price,
+				discont_price,
+				description,
+			})
+		);
 
 	return (
 		<div className={s.product_card}>
@@ -18,7 +35,7 @@ export default function ProductsCard({
 				<Link to={product_url}>
 					<img src={`http://127.0.0.1.:3333${image}`} alt={title} />
 				</Link>
-				<Button>Add to cart</Button>
+				<Button onClick={add_to_cart}>Add to cart</Button>
 			</div>
 
 			<div className={s.prices}>

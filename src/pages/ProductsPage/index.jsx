@@ -30,6 +30,8 @@ export default function ProductsPage() {
 		dispatch(searchPrice({ min_value, max_value }));
 	};
 
+	console.log(search);
+
 	return (
 		<div className={['wrapper', s.products_pages].join(' ')}>
 			<div>
@@ -39,8 +41,8 @@ export default function ProductsPage() {
 			</div>
 
 			<div className={s.sorting}>
-				<div className={s.price_form} onSubmit={search}>
-					<form>
+				<div className={s.price_form}>
+					<form onChange={search}>
 						<span>Price</span>
 						<input type="number" placeholder="from" name="min" />
 						<input type="number" placeholder="to" name="max" />
