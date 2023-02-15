@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import s from './index.module.css';
 import flowers from './media/flowers_stock.png';
 
-export default function Sale() {
+export default function Sale({ setModal }) {
 	return (
 		<section className={s.sale_container}>
 			<div className={['wrapper', s.sale_block].join(' ')}>
@@ -15,7 +15,10 @@ export default function Sale() {
 					<Link to="/catalog">
 						<Button type="sale_btn_white_mode">Sale</Button>
 					</Link>
-					<Button type="sale_btn_white_mode">Learn more</Button>
+
+					<Button type="sale_btn_white_mode" onClick={() => setModal(true)}>
+						Learn more
+					</Button>
 				</div>
 				<img src={flowers} alt="flowers" />
 			</div>
