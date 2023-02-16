@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CartCard from '../../components/CartCard';
+import CartPhoneForm from '../../components/CartPhoneForm';
 
 import { clearCart } from '../../store/reducers/cart';
 import Button from '../../UI/Button';
@@ -30,11 +31,18 @@ export default function CardPage() {
 						))}
 					</div>
 
-					<div className={s.total}>
+					<div className={s.total_block}>
 						<h3>Order details</h3>
-						<p>Total: {total} $ </p>
-						<div type="input_style_cart"></div>
-						<Button>Order</Button>
+						<p className={s.total}>
+							Total:
+							<span>
+								{total}
+								<span>$</span>
+							</span>
+						</p>
+						<div className={s.total_form}>
+							<CartPhoneForm />
+						</div>
 					</div>
 				</div>
 			)}

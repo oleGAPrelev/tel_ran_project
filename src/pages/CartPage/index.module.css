@@ -1,15 +1,42 @@
 .cart_block {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	gap: 60px;
 }
 
-.total {
+.total_block {
 	border: 2px solid #000000;
 	border-radius: 21px;
+	max-width: 496px;
+	max-height: 425px;
 }
 
-.total h3 {
+.total_block h3 {
 	font-weight: 600;
 	font-size: 28px;
 	line-height: 130%;
 	margin: 25px 0 47px 25px;
+}
+
+.total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 25px 40px 25px;
+	font-weight: 500;
+	font-size: 24px;
+}
+
+.total span {
+	font-weight: 600;
+	font-size: 32px;
+}
+
+.total span span {
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.total_form {
+	margin: 25px;
 }

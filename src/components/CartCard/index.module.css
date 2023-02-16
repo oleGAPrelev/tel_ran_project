@@ -1,6 +1,13 @@
 .card {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: auto auto 200px;
+	gap: 25px;
+	padding: 40px 0;
+	border-top: 1px solid #a7a7a7;
+}
+
+.card:last-child {
+	border-bottom: 1px solid #a7a7a7;
 }
 
 .card img {
@@ -13,11 +20,32 @@
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 130%;
-	margin: 0 29px 0 24px;
+	/* margin: 0 29px 0 24px; */
+}
+
+.triggers {
+	margin-top: 20px;
 }
 
 .price_block {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	gap: 20px;
+}
+
+.price_block span {
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.price_block p:nth-child(1) {
+	font-weight: 600;
+	font-size: 40px;
+}
+
+.price_block p:nth-child(2) {
+	font-weight: 500;
+	font-size: 20px;
+	color: #8b8b8b;
 }

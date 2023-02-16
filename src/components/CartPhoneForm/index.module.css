@@ -1,0 +1,36 @@
+.form_container input {
+	margin: 5px 0;
+	border: 1px solid #000000;
+	max-width: 446px;
+	max-height: 73px;
+}
+:focus {
+	outline: none;
+}
+
+.error {
+	background-color: crimson;
+	opacity: 0;
+	animation: ani 0.5s forwards;
+}
+
+@keyframes ani {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.form_container button {
+	width: 446px;
+	height: 73px;
+	border: 2.39494px solid #ffffff;
+	border-radius: 25.1468px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 28.7392px;
+	line-height: 120%;
+	margin-top: 20px;
+}
