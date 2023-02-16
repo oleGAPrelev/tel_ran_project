@@ -1,0 +1,23 @@
+.card {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card img {
+	width: 192.6px;
+	height: 166.64px;
+	object-fit: cover;
+}
+
+.descr p {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 130%;
+	margin: 0 29px 0 24px;
+}
+
+.price_block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

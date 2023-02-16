@@ -1,0 +1,33 @@
+input {
+	margin: 6px 0 6px 0;
+}
+:focus {
+	outline: none;
+}
+
+.error {
+	background-color: crimson;
+	opacity: 0;
+	animation: ani 0.5s forwards;
+}
+
+@keyframes ani {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.form_container button {
+	width: 473px;
+	height: 75.44px;
+	border: 2.39494px solid #ffffff;
+	border-radius: 25.1468px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 28.7392px;
+	line-height: 120%;
+	margin-top: 24px;
+}

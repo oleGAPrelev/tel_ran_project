@@ -5,6 +5,7 @@ import ProductsCard from '../../components/ProductsCard';
 import { load_products } from '../../requests/products_req';
 import {
 	searchPrice,
+	sortPrice,
 	sortProducts,
 } from '../../store/reducers/productsReducer';
 import s from './index.module.css';
@@ -30,7 +31,7 @@ export default function ProductsPage() {
 		dispatch(searchPrice({ min_value, max_value }));
 	};
 
-	console.log(search);
+	const sort_price = (event) => dispatch(sortPrice(event.target.value));
 
 	return (
 		<div className={['wrapper', s.products_pages].join(' ')}>
@@ -50,7 +51,7 @@ export default function ProductsPage() {
 				</div>
 
 				<div className={s.checkbox_block}>
-					<form>
+					<form onChange={sort_price}>
 						<span>Discounted items</span>
 						<input type="checkbox" />
 					</form>

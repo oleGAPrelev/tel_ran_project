@@ -1,0 +1,15 @@
+.cart_block {
+	display: flex;
+}
+
+.total {
+	border: 2px solid #000000;
+	border-radius: 21px;
+}
+
+.total h3 {
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 130%;
+	margin: 25px 0 47px 25px;
+}
