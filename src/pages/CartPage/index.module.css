@@ -1,3 +1,7 @@
+.cart_page h2 {
+	margin: 79px 0;
+}
+
 .cart_block {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
@@ -39,4 +43,8 @@
 
 .total_form {
 	margin: 25px;
+}
+
+.cart_button {
+	margin: 25px 0;
 }

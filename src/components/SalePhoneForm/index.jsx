@@ -23,7 +23,7 @@ export default function SalePhoneForm() {
 			onSubmit={handleSubmit(formHandleSubmit)}
 		>
 			<label>
-				<p>Telefonnummer</p>
+				<p>Phone number</p>
 				<Input
 					{...register('phone', {
 						required: 'Dieses Feld ist erforderlich',

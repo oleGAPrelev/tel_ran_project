@@ -4,13 +4,29 @@
 	gap: 25px;
 	padding: 40px 0;
 	border-top: 1px solid #a7a7a7;
+	position: relative;
+}
+
+.cross_icon {
+	position: absolute;
+	top: 16px;
+	right: 1px;
+	font-size: 30px;
+	cursor: pointer;
+	z-index: 10;
+	color: #000000;
 }
 
 .card:last-child {
 	border-bottom: 1px solid #a7a7a7;
 }
 
-.card img {
+.card_images {
+	display: flex;
+	align-items: center;
+}
+
+.card_images img {
 	width: 192.6px;
 	height: 166.64px;
 	object-fit: cover;
@@ -20,11 +36,26 @@
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 130%;
-	/* margin: 0 29px 0 24px; */
 }
 
 .triggers {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 140px;
+	height: 40px;
 	margin-top: 20px;
+	border: 1px solid #000000;
+	border-radius: 12px;
+}
+.triggers button {
+	background-color: white;
+	border: none;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 20px;
+	align-items: center;
+	margin: 0 auto;
 }
 
 .price_block {

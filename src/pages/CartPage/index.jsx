@@ -46,7 +46,7 @@ export default function CardPage() {
 					</div>
 				</div>
 			)}
-			<div>
+			<div className={s.cart_button}>
 				<Button onClick={clear_cart}>Clear cart</Button>
 			</div>
 		</div>
