@@ -1,6 +1,6 @@
 .card {
 	display: grid;
-	grid-template-columns: auto auto 200px;
+	grid-template-columns: 200px auto 200px;
 	gap: 25px;
 	padding: 40px 0;
 	border-top: 1px solid #a7a7a7;
@@ -21,15 +21,15 @@
 	border-bottom: 1px solid #a7a7a7;
 }
 
-.card_images {
-	display: flex;
-	align-items: center;
-}
-
 .card_images img {
 	width: 192.6px;
 	height: 166.64px;
 	object-fit: cover;
+}
+
+.descr {
+	position: relative;
+	display: flex;
 }
 
 .descr p {
@@ -44,10 +44,12 @@
 	justify-content: space-between;
 	width: 140px;
 	height: 40px;
-	margin-top: 20px;
 	border: 1px solid #000000;
 	border-radius: 12px;
+	position: absolute;
+	top: 75%;
 }
+
 .triggers button {
 	background-color: white;
 	border: none;
@@ -62,7 +64,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 20px;
 }
 
 .price_block span {

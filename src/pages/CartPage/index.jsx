@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import CartCard from '../../components/CartCard';
 import CartPhoneForm from '../../components/CartPhoneForm';
 
@@ -26,6 +27,20 @@ export default function CardPage() {
 			) : (
 				<div className={s.cart_block}>
 					<div>
+						<div className={s.cart_header}>
+							<nav className={s.breadcrumbs}>
+								<ul className={s.breadcrumbs_list} reset-list>
+									<li>
+										<Link to="/">Home /</Link>
+									</li>
+									<li>Cart</li>
+								</ul>
+							</nav>
+							<Link to="/categories" className={s.cart_back_link}>
+								Back to the store &gt;
+							</Link>
+						</div>
+
 						{cart.map((el) => (
 							<CartCard key={el.id} {...el} />
 						))}

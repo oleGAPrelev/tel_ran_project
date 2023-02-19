@@ -14,7 +14,6 @@ export default function CartCard({
 	image,
 	price,
 	discont_price,
-	description,
 	count,
 }) {
 	const dispatch = useDispatch();
@@ -33,7 +32,7 @@ export default function CartCard({
 			</div>
 
 			<div className={s.descr}>
-				<p>{description}</p>
+				<p>{title}</p>
 				<div className={s.triggers}>
 					<button onClick={decrement}>-</button>
 					<p>{count}</p>
