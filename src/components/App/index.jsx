@@ -6,6 +6,7 @@ import HomePage from '../../pages/HomePage';
 import NotFoundPage from '../../pages/NotFoundPage';
 import ProductDescrPage from '../../pages/ProductDescrPage';
 import ProductsPage from '../../pages/ProductsPage';
+import SalePage from '../../pages/SalePage';
 import Layout from '../Layout';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 					<Route path="categories/:id" element={<ProductsPage />} />
 					<Route path="/product/:id" element={<ProductDescrPage />} />
 					<Route path="/catalog" element={<CatalogPage />} />
+					<Route path="/sale" element={<SalePage />} />
 					<Route path="*" element={<NotFoundPage />} />
 				</Route>
 			</Routes>

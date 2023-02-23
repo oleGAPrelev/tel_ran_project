@@ -12,7 +12,7 @@ export default function Sale({ setModal }) {
 					<h2>
 						Sale <span className={s.accent}>New season</span>
 					</h2>
-					<Link to="/catalog">
+					<Link to="/sale">
 						<Button type="sale_btn_white_mode">Sale</Button>
 					</Link>
 
