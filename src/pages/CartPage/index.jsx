@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CartCard from '../../components/CartCard';
 import CartPhoneForm from '../../components/CartPhoneForm';
-
 import { clearCart } from '../../store/reducers/cart';
 import Button from '../../UI/Button';
 import s from './index.module.css';

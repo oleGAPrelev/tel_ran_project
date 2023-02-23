@@ -34,6 +34,19 @@
 }
 
 .bad {
-	width: 27px;
+	width: 30px;
 	height: 30px;
+}
+
+.handbag {
+	display: flex;
+	position: relative;
+}
+.handbag span {
+	color: #339933;
+	position: absolute;
+	top: 10px;
+	left: 0.5vh;
+	font-weight: 700;
+	font-size: 16px;
 }

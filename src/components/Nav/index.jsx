@@ -5,8 +5,12 @@ import logo from './media/garden_logo.png';
 import { SlHandbag } from 'react-icons/sl';
 import { Link } from 'react-router-dom';
 import { Link as Lscroll } from 'react-scroll';
+import { useSelector } from 'react-redux';
 
 export default function Nav() {
+	const cart = useSelector((state) => state.cart);
+
+	const count = cart.reduce((prev, { count }) => prev + count, 0);
 	return (
 		<nav className={['wrapper', s.nav_block].join(' ')}>
 			<div className={s.logo_btn}>
@@ -54,8 +58,9 @@ export default function Nav() {
 					Contact
 				</Lscroll>
 
-				<Link to="/cart">
+				<Link to="/cart" className={s.handbag}>
 					<SlHandbag className={s.bad} />
+					{count > 0 && <span>{count}</span>}
 				</Link>
 			</ul>
 		</nav>
