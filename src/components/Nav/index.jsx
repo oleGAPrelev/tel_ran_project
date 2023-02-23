@@ -20,6 +20,7 @@ export default function Nav() {
 
 			<ul className={s.nav_menu}>
 				<Link to="/categories">Catalogs</Link>
+
 				<Lscroll
 					to="coupon"
 					className={s.scroll}
@@ -30,6 +31,7 @@ export default function Nav() {
 				>
 					Coupon
 				</Lscroll>
+
 				<Lscroll
 					to="stock"
 					className={s.scroll}
@@ -40,6 +42,7 @@ export default function Nav() {
 				>
 					Sale
 				</Lscroll>
+
 				<Lscroll
 					to="contacts"
 					className={s.scroll}
@@ -50,6 +53,7 @@ export default function Nav() {
 				>
 					Contact
 				</Lscroll>
+
 				<Link to="/cart">
 					<SlHandbag className={s.bad} />
 				</Link>

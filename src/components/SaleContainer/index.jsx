@@ -21,8 +21,8 @@ export default function SaleContainer() {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		autoplay: true,
-		speed: 2000,
-		autoplaySpeed: 2000,
+		speed: 3000,
+		autoplaySpeed: 1000,
 		cssEase: 'linear',
 		arrows: false,
 	};
@@ -31,9 +31,11 @@ export default function SaleContainer() {
 		<div className={['wrapper', s.sale_block].join(' ')}>
 			<h2>Sale</h2>
 			<Slider {...settings} className={s.info_sale_block}>
-				{all_products.map((el) => (
-					<Sales key={el.id} {...el} />
-				))}
+				{all_products
+					.filter((el) => el.price !== el.discont_price)
+					.map((el) => (
+						<Sales key={el.id} {...el} />
+					))}
 			</Slider>
 		</div>
 	);
