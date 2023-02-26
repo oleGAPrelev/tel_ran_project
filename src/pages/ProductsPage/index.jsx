@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import ProductsCard from '../../components/ProductsCard';
 import { load_products } from '../../requests/products_req';
 import {
 	searchPrice,
-	sortPrice,
 	sortProducts,
 } from '../../store/reducers/productsReducer';
 import s from './index.module.css';
@@ -16,6 +15,8 @@ export default function ProductsPage() {
 	const { id } = useParams();
 	const products = useSelector((state) => state.products);
 	const categories = useSelector((state) => state.categories);
+
+	console.log(products);
 
 	useEffect(() => {
 		dispatch(load_products(id));
@@ -31,7 +32,11 @@ export default function ProductsPage() {
 		dispatch(searchPrice({ min_value, max_value }));
 	};
 
-	const sort_price = (event) => dispatch(sortPrice(event.target.value));
+	const [isChecked, setIsChecked] = useState(false);
+
+	const handleOnChange = () => {
+		setIsChecked(!isChecked);
+	};
 
 	return (
 		<div className={['wrapper', s.products_pages].join(' ')}>
@@ -43,17 +48,24 @@ export default function ProductsPage() {
 
 			<div className={s.sorting}>
 				<div className={s.price_form}>
-					<form onChange={search}>
+					<form onSubmit={search}>
 						<span>Price</span>
 						<input type="number" placeholder="from" name="min" />
 						<input type="number" placeholder="to" name="max" />
+						<button>ok</button>
 					</form>
 				</div>
 
 				<div className={s.checkbox_block}>
-					<form onChange={sort_price}>
+					<form>
 						<span>Discounted items</span>
-						<input type="checkbox" />
+						<input
+							type="checkbox"
+							id="discountedItems"
+							name="discountedItems"
+							checked={isChecked}
+							onChange={handleOnChange}
+						/>
 					</form>
 				</div>
 
@@ -70,11 +82,13 @@ export default function ProductsPage() {
 			</div>
 
 			<div className={s.products}>
-				{products
-					.filter((el) => !el.hide)
-					.map((el) => (
-						<ProductsCard key={el.id} {...el} />
-					))}
+				{products.length &&
+					products
+						.filter((el) =>
+							el.price === el.discont_price ? !isChecked : products
+						)
+						.filter((el) => !el.hide)
+						.map((el) => <ProductsCard key={el.id} {...el} />)}
 			</div>
 		</div>
 	);

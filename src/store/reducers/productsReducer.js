@@ -3,14 +3,12 @@ const defaultState = [];
 const LOAD_PRODUCTS = 'LOAD_PRODUCTS';
 const SORT_PRODUCTS = 'SORT_PRODUCTS';
 const SEARCH_PRICE = 'SEARCH_PRICE';
-const SORT_PRICE = 'SORT_PRICE';
 
 let first_state = [];
 
 export const loadProducts = (payload) => ({ type: LOAD_PRODUCTS, payload });
 export const sortProducts = (payload) => ({ type: SORT_PRODUCTS, payload });
 export const searchPrice = (payload) => ({ type: SEARCH_PRICE, payload });
-export const sortPrice = (payload) => ({ type: SORT_PRICE, payload });
 
 export const productsReducer = (state = defaultState, action) => {
 	if (action.type === LOAD_PRODUCTS) {
@@ -35,10 +33,6 @@ export const productsReducer = (state = defaultState, action) => {
 				el.hide = true;
 			}
 			return el;
-		});
-	} else if (action.payload === SORT_PRICE) {
-		return [...state].sort((a, b) => {
-			return a.discont_price < b.price;
 		});
 	} else {
 		return state;

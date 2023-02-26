@@ -28,7 +28,7 @@ export default function CartPhoneForm() {
 					{...register('phone', {
 						required: 'Dieses Feld ist erforderlich',
 						pattern: {
-							value: /^[0-9\+\(\)\-\s]+$/,
+							value: /^\+(?:[0-9] ?){6,14}[0-9]$/,
 							message: 'Nur Zahlen, +, -, (, ), und Leerzeichen sind erlaubt',
 						},
 					})}
