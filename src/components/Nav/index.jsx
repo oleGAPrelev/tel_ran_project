@@ -25,16 +25,7 @@ export default function Nav() {
 			<ul className={s.nav_menu}>
 				<Link to="/categories">Catalogs</Link>
 
-				<Lscroll
-					to="coupon"
-					className={s.scroll}
-					spy={true}
-					smooth={true}
-					offset={50}
-					duration={900}
-				>
-					Coupon
-				</Lscroll>
+				<Link to="/coupon">Coupon</Link>
 
 				<Link to="/sale">Sale</Link>
 

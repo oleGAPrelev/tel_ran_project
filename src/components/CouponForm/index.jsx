@@ -4,7 +4,7 @@ import Button from '../../UI/Button';
 import Input from '../../UI/Input';
 import s from './index.module.css';
 
-export default function SalePhoneForm() {
+export default function CouponForm() {
 	const {
 		register,
 		handleSubmit,
@@ -21,6 +21,28 @@ export default function SalePhoneForm() {
 			className={s.form_container}
 			onSubmit={handleSubmit(formHandleSubmit)}
 		>
+			<label>
+				<p>First name, Last name</p>
+				<Input
+					id="name"
+					{...register('name', {
+						required: 'Dieses Feld ist erforderlich',
+						pattern: {
+							value: /^[A-Za-z\s]+$/i,
+							message: 'Nur Buchstaben sind erlaubt',
+						},
+					})}
+				/>
+				{errors?.name && (
+					<>
+						<br />
+						<span className={s.error}>
+							{errors?.name?.message || 'Fehler!'}
+						</span>
+					</>
+				)}
+			</label>
+
 			<label>
 				<p>Phone number</p>
 				<Input

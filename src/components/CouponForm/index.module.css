@@ -1,8 +1,6 @@
 .form_container input {
-	margin: 5px 0;
+	margin: 6px 0 6px 0;
 	border: 1px solid #339933;
-	max-width: 446px;
-	max-height: 73px;
 }
 :focus {
 	outline: none;
@@ -24,13 +22,13 @@
 }
 
 .form_container button {
-	width: 446px;
-	height: 73px;
+	width: 473px;
+	height: 75.44px;
 	border: 2.39494px solid #ffffff;
 	border-radius: 25.1468px;
 	color: #ffffff;
 	font-weight: 700;
 	font-size: 28.7392px;
 	line-height: 120%;
-	margin-top: 20px;
+	margin-top: 24px;
 }

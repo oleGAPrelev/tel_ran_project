@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../../UI/Button';
 import s from './index.module.css';
 
 export default function SaleCard({ id, title, image, price, discont_price }) {
 	const product_url = `/product/${id}`;
 	return (
-		<div className={s.sales_card} id="stock">
+		<div className={s.sales_card}>
 			<div>
 				<Link to={product_url}>
 					<img src={`http://127.0.0.1.:3333${image}`} alt={title} />
 				</Link>
+				<Button>Add to cart</Button>
 			</div>
 
 			<div className={s.prices}>

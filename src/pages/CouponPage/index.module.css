@@ -1,0 +1,26 @@
+.coupon_pages h2 {
+	font-weight: 700;
+	font-size: 40px;
+	margin: 79px 0 81px 0;
+}
+
+.coupon_pages h3 {
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 130%;
+	color: red;
+}
+
+.discount_block {
+	display: flex;
+	justify-content: space-between;
+	margin: 40px 0;
+}
+
+.img_block {
+	margin: 27px 91px;
+}
+
+.discount_form {
+	margin: 70px 200px;
+}

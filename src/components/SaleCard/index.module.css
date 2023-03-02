@@ -4,6 +4,29 @@
 	object-fit: cover;
 }
 
+.sales_card button {
+	width: 279px;
+	height: 72px;
+	background: #f1fff1;
+	border: 2px solid #339933;
+	border-radius: 21px;
+	color: #339933;
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	opacity: 0;
+}
+
+.sales_card:hover button {
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
+.sales_card div:nth-child(1) {
+	display: flex;
+	position: relative;
+}
+
 .prices {
 	display: flex;
 	align-items: center;
