@@ -7,6 +7,7 @@ import {
 	searchPrice,
 	sortProducts,
 } from '../../store/reducers/productsReducer';
+import Button from '../../UI/Button';
 import s from './index.module.css';
 
 export default function ProductsPage() {
@@ -52,7 +53,7 @@ export default function ProductsPage() {
 						<span>Price</span>
 						<input type="number" placeholder="from" name="min" />
 						<input type="number" placeholder="to" name="max" />
-						<button>ok</button>
+						<Button>Search</Button>
 					</form>
 				</div>
 
