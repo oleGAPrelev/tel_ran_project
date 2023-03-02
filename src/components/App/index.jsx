@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import CartPage from '../../pages/CartPage';
 import CatalogPage from '../../pages/CatalogPage';
@@ -7,9 +9,23 @@ import NotFoundPage from '../../pages/NotFoundPage';
 import ProductDescrPage from '../../pages/ProductDescrPage';
 import ProductsPage from '../../pages/ProductsPage';
 import SalePage from '../../pages/SalePage';
+import { localStoreCard } from '../../store/reducers/cart';
 import Layout from '../Layout';
 
 function App() {
+	const dispatch = useDispatch();
+
+	const cart = useSelector((state) => state.cart);
+
+	useEffect(() => {
+		const cartLocal = JSON.parse(localStorage.getItem('cart'));
+		if (cartLocal && cartLocal.length) dispatch(localStoreCard(cartLocal));
+	}, [dispatch]);
+
+	useEffect(() => {
+		localStorage.setItem('cart', JSON.stringify(cart));
+	}, [cart]);
+
 	return (
 		<>
 			<Routes>

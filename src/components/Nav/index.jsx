@@ -36,16 +36,7 @@ export default function Nav() {
 					Coupon
 				</Lscroll>
 
-				<Lscroll
-					to="stock"
-					className={s.scroll}
-					spy={true}
-					smooth={true}
-					offset={50}
-					duration={900}
-				>
-					Sale
-				</Lscroll>
+				<Link to="/sale">Sale</Link>
 
 				<Lscroll
 					to="contacts"
