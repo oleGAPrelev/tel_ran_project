@@ -33,7 +33,10 @@ export default function ProductsCard({
 		<div className={s.product_card}>
 			<div>
 				<Link to={product_url}>
-					<img src={`http://127.0.0.1.:3333${image}`} alt={title} />
+					<img
+						src={`https://gartenbackend.onrender.com/${image}`}
+						alt={title}
+					/>
 				</Link>
 				<Button onClick={add_to_cart}>Add to cart</Button>
 			</div>

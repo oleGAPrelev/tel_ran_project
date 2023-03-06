@@ -28,7 +28,7 @@ export default function CartCard({
 		<div className={s.card}>
 			<IoIosClose className={s.cross_icon} onClick={() => del_product(id)} />
 			<div className={s.card_images}>
-				<img src={`http://127.0.0.1.:3333${image}`} alt={title} />
+				<img src={`https://gartenbackend.onrender.com/${image}`} alt={title} />
 			</div>
 
 			<div className={s.descr}>

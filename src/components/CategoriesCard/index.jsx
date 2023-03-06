@@ -6,7 +6,7 @@ export default function CategoriesCard({ id, image, title }) {
 	return (
 		<label className={['wrapper', s.all_catigories].join(' ')}>
 			<Link key={id} to={`/categories/${id}`}>
-				<img src={`http://localhost:3333/${image}`} alt={title} />
+				<img src={`https://gartenbackend.onrender.com/${image}`} alt={title} />
 				<p>{title}</p>
 			</Link>
 		</label>

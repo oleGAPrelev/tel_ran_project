@@ -6,7 +6,7 @@ export default function Categories({ id, image, title }) {
 	return (
 		<label className={s.catigories}>
 			<Link key={id} to={`/categories/${id}`}>
-				<img src={`http://localhost:3333/${image}`} alt={title} />
+				<img src={`https://gartenbackend.onrender.com/${image}`} alt={title} />
 				<p>{title}</p>
 			</Link>
 		</label>

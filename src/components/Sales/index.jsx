@@ -8,7 +8,10 @@ export default function Sales({ id, title, image, price, discont_price }) {
 		<div className={s.sales_card}>
 			<div>
 				<Link to={product_url}>
-					<img src={`http://127.0.0.1.:3333${image}`} alt={title} />
+					<img
+						src={`https://gartenbackend.onrender.com/${image}`}
+						alt={title}
+					/>
 				</Link>
 			</div>
 

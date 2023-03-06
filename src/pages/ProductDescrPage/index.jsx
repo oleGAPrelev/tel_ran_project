@@ -31,7 +31,10 @@ export default function ProductDescrPage() {
 
 				<div className={s.desct_block}>
 					<div>
-						<img src={`http://127.0.0.1.:3333${image}`} alt={title} />
+						<img
+							src={`https://gartenbackend.onrender.com/${image}`}
+							alt={title}
+						/>
 					</div>
 
 					<div className={s.price_block}>
